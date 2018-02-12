@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Chat app</title>
+   <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+   <div id="app">
+      <div class="chat">
+         <div class="chat__sidebar">
+            <h3>Users</h3>
+            <div id="users"></div>
+         </div>
+         <div class="chat__main list-group">
+            <ul id="messages" class="chat__messages">
+               <li class="list-group-item" v-for="msg in messages" :key="msg.createdAt">
+                  <div class="msg-avatar">
+                     <img src="/img/user.png" alt="" />
+                     <span class="timestamp">{{msg.createdAt}}</span>
+                  </div>
+
+
+                  <div class="msg-text">
+                     <span class="from">{{msg.from}}</span>
+                     <p>{{msg.text}}</p>
+                  </div>
+               </li>
+            </ul>
+            <div class="chat__footer">
+               <form @submit.prevent="sumbit" id="message-form" autocomplete="off">
+                  <input id="msgInput" type="text" name="message" placeholder="type" autofocus />
+                  <button>Send</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+
+   
+   
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="/js/app.js"></script>   
+</body>
+</html>
