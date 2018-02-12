@@ -8,6 +8,7 @@ const app = express();
 const server=http.createServer(app);
 const io=socket(server);
 
+const port =process.env.PORT || 9000
 const publicPath=path.join(__dirname,'/client');
 app.use(express.static(publicPath));
 
@@ -31,6 +32,6 @@ io.on('connection', (client) => {
 
 });
 
-server.listen(9000,()=>{
-   console.log('server is running on port 9000');
+server.listen(port,()=>{
+   console.log('server is running on port '+port);
 })
