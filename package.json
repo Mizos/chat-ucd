@@ -1,11 +1,19 @@
 {
+<<<<<<< HEAD
   "name": "chat-app",
+=======
+  "name": "server",
+>>>>>>> 7d144ba220b84b359ad0f8a40c7581c53c0885a1
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "node index.js"
+=======
+    "start":"node index.js"
+>>>>>>> 7d144ba220b84b359ad0f8a40c7581c53c0885a1
   },
   "author": "",
   "license": "ISC",
